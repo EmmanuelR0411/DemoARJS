@@ -22,7 +22,7 @@ window.addEventListener('load', () => {
         entity.setAttribute('rotation', '0 0 0');
         entity.setAttribute('scale', '0.15 0.15 0.15');
         // entity.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
-        entity.setAttribute('position', '100 0 -10')
+        entity.setAttribute('position', '-100 0 -10')
         // entity.setAttribute('animation-mixer', '');
 
         console.log('AAAAAAAAAAAAAAAAAAA: ', latitude,'BBBBBBBBBBBBBBBBBBB: ', longitude)
