@@ -20,9 +20,9 @@ window.addEventListener('load', () => {
         const entity = document.createElement('a-entity');
         entity.setAttribute('gltf-model', './assets/magnemite/scene.gltf');
         entity.setAttribute('rotation', '0 0 0');
-        entity.setAttribute('scale', '1 1 -5');
+        entity.setAttribute('scale', '0.1 0.1 0.1');
         // entity.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
-        entity.setAttribute('position', '0.9 0 -1')
+        entity.setAttribute('position', '0.9, 0, -5')
         // entity.setAttribute('animation-mixer', '');
 
         console.log('AAAAAAAAAAAAAAAAAAA: ', latitude,'BBBBBBBBBBBBBBBBBBB: ', longitude)
