@@ -14,9 +14,9 @@
 </head>
 
 <body style='margin: 0; overflow: hidden;'>
-    <div style="display: block; z-index: 500;">
+    <div style="display: block; z-index: 500; width: 100%;">
         <p id = "status"></p>
-        <h1 style="background-color: red; color: white; ">CAMBIO</h1>
+        <h1 style="background-color: blue; color: white; ">CAMBIO</h1>
     </div>
 
     <a-scene
@@ -32,7 +32,7 @@
             id="model"
             gltf-model="./assets/magnemite/scene.gltf"
             class="cantap"
-            scale="1 1 1S"
+            scale="1 1 1"
             xrextras-hold-drag 
             xrextras-two-finger-rotate
             xrextras-pinch-scale>
@@ -40,7 +40,7 @@
         </a-entity>
         <a-camera
             id="camera"
-            position="0 20 10"
+            position="0 20 -10"
             raycaster="objects: .cantap"
             cursor="
             fuse: false;
