@@ -10,7 +10,6 @@
     <script>
         THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
     </script>
-    <script src="//cdn.8thwall.com/web/aframe/aframe-extras-6.1.1.min.js"></script>
     <script src="localizacion.js"></script>
 </head>
 
@@ -34,6 +33,21 @@
             rayOrigin: mouse;">
         </a-camera>
         <!-- <a-camera gps-camera rotation-reader></a-camera> -->
+
+        <a-entity
+            light="type: directional;
+                intensity: 0.8;
+                castShadow: true;
+                shadowMapHeight:2048;
+                shadowMapWidth:2048;
+                shadowCameraTop: 10;
+                target: #model;"
+            position="1 4.3 2.5"
+            xrextras-attach="target: model; offset: 1 15 3;"
+            shadow>
+        </a-entity>
+
+        <a-light type="ambient" intensity="0.5"></a-light>
 
         <a-entity
             id="model"
