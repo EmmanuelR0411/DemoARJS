@@ -14,15 +14,39 @@
 </head>
 
 <body style='margin: 0; overflow: hidden;'>
-    <p id = "status"></p>
+    <div style="display: block; z-index: 500;">
+        <p id = "status"></p>
+        <h1 style="background-color: red; color: white; ">CAMBIO</h1>
+    </div>
+
     <a-scene
         id="scene"
         vr-mode-ui="enabled: false"
 		embedded
-        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-        <h1 style="background-color: black; color: white;">CAMBIO</h1>
-        <a-camera gps-camera rotation-reader></a-camera>
+        arjs='sourceType: webcam;  debugUIEnabled: false;'
+        xrextras-gesture-detector
+        xrweb>
+        <!-- <a-camera gps-camera rotation-reader></a-camera> -->
 
+        <a-entity
+            id="model"
+            gltf-model="./assets/magnemite/scene.gltf"
+            class="cantap"
+            scale="3 3 3"
+            xrextras-hold-drag 
+            xrextras-two-finger-rotate
+            xrextras-pinch-scale>
+            
+        </a-entity>
+        <a-camera
+            id="camera"
+            position="0 8 8"
+            raycaster="objects: .cantap"
+            cursor="
+            fuse: false;
+            rayOrigin: mouse;">
+        </a-camera>
         
+        <a-plane id="ground" position="0 0 0" rotation="-90 0 0" width="50" height="50" ></a-plane>
 	</a-scene>
 </body>
