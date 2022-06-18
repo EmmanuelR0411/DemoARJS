@@ -21,7 +21,7 @@ window.addEventListener('load', () => {
         entity.setAttribute('gltf-model', './assets/magnemite/scene.gltf');
         entity.setAttribute('rotation', '0 0 0');
         entity.setAttribute('scale', '0.15 0.15 0.15');
-        entity.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
+        // entity.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
         entity.setAttribute('position', { x: 0, y: 0, z: 80 })
         
         // entity.setAttribute('animation-mixer', '');
