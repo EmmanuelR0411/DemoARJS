@@ -22,7 +22,18 @@
 		embedded
         arjs='sourceType: webcam;  debugUIEnabled: false;'
         xrextras-gesture-detector
+        xrextras-loading
+        xrextras-runtime-error
+        renderer="colorManagement:true"
         xrweb>
+        <a-camera
+            id="camera"
+            position="0 8 8"
+            raycaster="objects: .cantap"
+            cursor="
+            fuse: false;
+            rayOrigin: mouse;">
+        </a-camera>
         <!-- <a-camera gps-camera rotation-reader></a-camera> -->
 
         <a-entity
@@ -38,14 +49,6 @@
             xrextras-pinch-scale>
             
         </a-entity>
-        <a-camera
-            id="camera"
-            position="0 8 8"
-            raycaster="objects: .cantap"
-            cursor="
-            fuse: false;
-            rayOrigin: mouse;">
-        </a-camera>
         
         <a-plane id="ground" position="0 0 0" rotation="-90 0 0" width="50" height="50" material="shader: shadow"></a-plane>
 	</a-scene>
